@@ -1,0 +1,1113 @@
+
+/* =========================================
+   KASTASEN GHANA LIMITED
+   BRAND COLOUR WEBSITE DESIGN
+========================================= */
+
+
+/* 1. GLOBAL STYLES */
+
+:root {
+  --primary-green: #066835;
+  --deep-green: #034D2C;
+  --brand-yellow: #FEC202;
+  --white: #FFFFFF;
+  --light-grey: #F4F5F3;
+  --dark-text: #333333;
+  --muted-text: #666666;
+  --border-color: #E0E0E0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--white);
+  color: var(--dark-text);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* 2. HEADER AND NAVIGATION */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  padding: 15px 5%;
+
+  background-color: var(--primary-green);
+  color: var(--white);
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.logo-container img {
+  display: block;
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.company-title {
+  margin-right: auto;
+}
+
+.company-title h1 {
+  margin: 0;
+  color: var(--brand-yellow);
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.company-title p {
+  margin: 5px 0 0;
+  color: var(--white);
+  font-size: 13px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active-link {
+  color: var(--brand-yellow);
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: var(--white);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+/* 3. SHARED SECTION STYLES */
+
+main section {
+  padding: 80px 5%;
+}
+
+main section h2 {
+  margin-top: 0;
+  color: var(--primary-green);
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+main section > p,
+.product-container > p,
+.bulk-container > p {
+  max-width: 760px;
+  margin: 0 auto 25px;
+  text-align: center;
+}
+
+
+/* 4. BUTTONS */
+
+.btn,
+.hero-button {
+  display: inline-block;
+  margin: 10px 6px 0;
+  padding: 13px 25px;
+
+  border: 2px solid var(--brand-yellow);
+  border-radius: 6px;
+
+  background-color: var(--brand-yellow);
+  color: var(--deep-green);
+
+  font-weight: bold;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.hero-button:hover {
+  background-color: var(--deep-green);
+  border-color: var(--deep-green);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+
+/* 5. HERO SECTION */
+
+.hero {
+  min-height: 520px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 5%;
+
+  background: linear-gradient(
+    135deg,
+    #FFFFFF,
+    #EAF3ED
+  );
+
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero h1 {
+  margin: 0 0 15px;
+  color: var(--primary-green);
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.2;
+}
+
+.hero h2 {
+  margin: 0 auto 20px;
+  color: var(--deep-green);
+  font-size: clamp(25px, 4vw, 40px);
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto 18px;
+  font-size: 18px;
+}
+
+.hero-button {
+  margin-top: 18px;
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  color: var(--white);
+}
+
+.hero-button:hover {
+  background-color: var(--deep-green);
+  border-color: var(--deep-green);
+}
+
+
+/* 6. ABOUT SECTION */
+
+.about {
+  background-color: var(--white);
+  text-align: center;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  margin: 18px auto;
+}
+
+.about-content h3 {
+  color: var(--primary-green);
+  font-size: 23px;
+}
+
+
+/* 7. PRODUCTS SECTION */
+
+.product {
+  background-color: var(--light-grey);
+  text-align: center;
+}
+
+.product-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+
+  margin: 40px 0 25px;
+}
+
+.product-card {
+  padding: 30px;
+  border-radius: 10px;
+
+  background-color: var(--white);
+  border-bottom: 4px solid var(--primary-green);
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-7px);
+  border-bottom-color: var(--brand-yellow);
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.product-card h3 {
+  margin-top: 0;
+  color: var(--primary-green);
+}
+
+
+/* 8. WHOLESALE SECTION */
+
+.bulk {
+  background-color: var(--primary-green);
+  color: var(--white);
+  text-align: center;
+}
+
+.bulk h2 {
+  color: var(--brand-yellow);
+}
+
+.bulk-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.bulk p {
+  color: var(--white);
+}
+
+
+/* 9. WHY CHOOSE US SECTION */
+
+.why-cu {
+  background-color: var(--white);
+  text-align: center;
+}
+
+.why-cu-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+
+  max-width: 1050px;
+  margin: 40px auto 0;
+
+  text-align: left;
+}
+
+.why-cu-card {
+  padding: 28px;
+
+  border-left: 5px solid var(--primary-green);
+  border-radius: 8px;
+
+  background-color: var(--light-grey);
+
+  transition: all 0.3s ease;
+}
+
+.why-cu-card:hover {
+  transform: translateY(-5px);
+  border-left-color: var(--brand-yellow);
+}
+
+.why-cu-card h3 {
+  margin-top: 0;
+  color: var(--primary-green);
+}
+
+
+/* 10. CEO SECTION */
+
+.ceo {
+  background-color: var(--light-grey);
+  text-align: center;
+}
+
+.ceo > p {
+  max-width: 750px;
+  margin: 0 auto 35px;
+}
+
+.ceo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.ceo-card {
+  width: min(100%, 380px);
+  padding: 25px;
+
+  border-radius: 10px;
+  background-color: var(--white);
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.ceo-image {
+  height: 320px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--light-grey);
+}
+
+.ceo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ceo-card h3 {
+  color: var(--primary-green);
+}
+
+
+/* 11. GALLERY SECTION */
+
+.gallery {
+  background-color: var(--white);
+  text-align: center;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+
+  max-width: 1200px;
+  margin: 35px auto 0;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--light-grey);
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+
+/* 12. LIGHTBOX */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+
+  padding: 55px 70px;
+
+  background-color: rgba(0, 0, 0, 0.94);
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox > img {
+  max-width: min(100%, 1000px);
+  max-height: 75vh;
+  object-fit: contain;
+}
+
+.lightbox p {
+  margin: 0;
+  color: var(--white);
+}
+
+#closeLightbox,
+.lightbox-nav {
+  position: absolute;
+  border: none;
+  background: transparent;
+  color: var(--white);
+  font-size: 34px;
+  cursor: pointer;
+}
+
+#closeLightbox {
+  top: 15px;
+  right: 25px;
+}
+
+#prevImage {
+  left: 15px;
+}
+
+#nextImage {
+  right: 15px;
+}
+
+
+/* 13. TESTIMONIALS SECTION */
+
+.testimonials {
+  background-color: var(--light-grey);
+  text-align: center;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+
+  max-width: 1200px;
+  margin: 35px auto 0;
+}
+
+.testimonial-card {
+  padding: 30px;
+  border-radius: 10px;
+
+  background-color: var(--white);
+  border-top: 4px solid var(--primary-green);
+
+  text-align: left;
+
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-top-color: var(--brand-yellow);
+}
+
+.testimonial-card > p {
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.testimonial-card h3 {
+  color: var(--primary-green);
+}
+
+
+/* 14. FAQ SECTION */
+
+.faq {
+  background-color: var(--white);
+  text-align: center;
+}
+
+.faq-container {
+  max-width: 850px;
+  margin: 35px auto 0;
+  text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 12px;
+  overflow: hidden;
+
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.faq-question {
+  display: flex;
+  width: 100%;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding: 18px 20px;
+
+  border: none;
+  background-color: var(--light-grey);
+  color: var(--primary-green);
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  background-color: #EAF3ED;
+}
+
+.faq-question span {
+  color: var(--primary-green);
+  font-size: 24px;
+}
+
+.faq-answer {
+  display: none;
+  padding: 5px 20px 18px;
+  background-color: var(--white);
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-answer p {
+  margin-bottom: 0;
+}
+
+
+/* 15. CUSTOMER ENQUIRY FORM */
+
+.customer {
+  background-color: var(--light-grey);
+  text-align: center;
+}
+
+.customer form {
+  max-width: 700px;
+  margin: 35px auto 0;
+
+  padding: 35px;
+
+  border-radius: 10px;
+  background-color: var(--white);
+
+  text-align: left;
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.customer label {
+  display: block;
+  margin: 0 0 7px;
+  color: var(--primary-green);
+  font-weight: bold;
+}
+
+.customer input,
+.customer select,
+.customer textarea {
+  display: block;
+  width: 100%;
+
+  margin-bottom: 20px;
+  padding: 12px;
+
+  border: 1px solid #CCCCCC;
+  border-radius: 6px;
+
+  background-color: var(--white);
+  font: inherit;
+}
+
+.customer textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.customer input:focus,
+.customer select:focus,
+.customer textarea:focus {
+  outline: 2px solid var(--brand-yellow);
+  border-color: var(--primary-green);
+}
+
+#formMessage {
+  margin: 0 0 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#formMessage.error {
+  color: #B91C1C;
+}
+
+#formMessage.success {
+  color: var(--primary-green);
+}
+
+
+/* 16. CONTACT SECTION */
+
+.contact {
+  background-color: var(--white);
+  text-align: center;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+
+  max-width: 1100px;
+  margin: 35px auto 0;
+
+  text-align: left;
+}
+
+.contact-info,
+.contact-message {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--light-grey);
+  border-top: 4px solid var(--primary-green);
+}
+
+.contact-info h3,
+.contact-message h3 {
+  margin-top: 0;
+  color: var(--primary-green);
+}
+
+.contact-button {
+  display: inline-block;
+  margin: 8px 8px 0 0;
+  padding: 12px 20px;
+
+  border-radius: 6px;
+  background-color: var(--primary-green);
+  color: var(--white);
+
+  font-weight: bold;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: var(--brand-yellow);
+  color: var(--deep-green);
+}
+
+.whatsapp-button {
+  background-color: #128C45;
+}
+
+
+/* 17. FOOTER SECTION */
+
+.footer {
+  padding-top: 55px;
+  background-color: var(--deep-green);
+  color: var(--white);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 35px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 0 5% 35px;
+}
+
+.footer h2 {
+  color: var(--brand-yellow);
+}
+
+.footer h2,
+.footer h3 {
+  margin-top: 0;
+}
+
+.footer h3 {
+  color: var(--brand-yellow);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer a {
+  width: fit-content;
+  margin-bottom: 9px;
+
+  color: var(--white);
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--brand-yellow);
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+
+/* 18. FLOATING WHATSAPP BUTTON */
+
+.whatsapp-float {
+  position: fixed;
+  right: 25px;
+  bottom: 85px;
+  z-index: 900;
+
+  display: flex;
+  width: 52px;
+  height: 52px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: #25D366;
+  color: var(--white);
+
+  font-size: 23px;
+  font-weight: bold;
+  text-decoration: none;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 19. BACK TO TOP BUTTON */
+
+#backToTop {
+  position: fixed;
+  right: 28px;
+  bottom: 20px;
+  z-index: 900;
+
+  display: none;
+  width: 48px;
+  height: 48px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: var(--primary-green);
+  color: var(--white);
+
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#backToTop:hover {
+  background-color: var(--brand-yellow);
+  color: var(--deep-green);
+}
+
+#backToTop.show {
+  display: block;
+}
+
+
+/* 20. LOADING SCREEN */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.loader.active {
+  display: flex;
+}
+
+.loader p {
+  color: var(--white);
+  font-weight: bold;
+}
+
+.loader small {
+  color: var(--brand-yellow);
+}
+
+.kgl-loader {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.kgl-loader span {
+  width: 9px;
+  height: 35px;
+
+  border-radius: 5px;
+  background-color: var(--brand-yellow);
+
+  animation: loaderPulse 0.8s ease-in-out infinite alternate;
+}
+
+.kgl-loader span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.kgl-loader span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.kgl-loader span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.kgl-loader span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.faq-answer[hidden] {
+  display: none !important;
+}
+
+@keyframes loaderPulse {
+  from {
+    transform: scaleY(0.45);
+    opacity: 0.55;
+  }
+
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   21. RESPONSIVE DESIGN
+========================================= */
+
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  .company-title h1 {
+    font-size: 21px;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  .product-grid,
+  .gallery-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-container {
+    grid-template-columns: 2fr 1fr;
+  }
+
+}
+
+
+/* MOBILE PHONES */
+
+@media (max-width: 768px) {
+
+  html {
+    scroll-padding-top: 90px;
+  }
+
+  header {
+    gap: 12px;
+    padding: 12px 5%;
+  }
+
+  .logo-container img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .company-title h1 {
+    font-size: 17px;
+  }
+
+  .company-title p {
+    font-size: 11px;
+  }
+
+
+  /* MOBILE NAVIGATION */
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  header nav {
+    display: none;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 8px 0;
+  }
+
+  header nav.active {
+    display: flex;
+  }
+
+  header nav a {
+    padding: 11px 5px;
+    text-align: center;
+  }
+
+
+  /* MOBILE SECTIONS */
+
+  main section {
+    padding: 60px 6%;
+  }
+
+  main section h2 {
+    font-size: 29px;
+  }
+
+
+  /* MOBILE HERO */
+
+  .hero {
+    min-height: 430px;
+    padding: 75px 6%;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+
+  /* MOBILE GRIDS */
+
+  .product-grid,
+  .why-cu-container,
+  .gallery-container,
+  .testimonial-container,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* MOBILE CEO */
+
+  .ceo-image {
+    height: 280px;
+  }
+
+
+  /* MOBILE FORM */
+
+  .customer form {
+    padding: 25px 20px;
+  }
+
+
+  /* MOBILE FOOTER */
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-bottom {
+    grid-column: auto;
+  }
+
+}
+
+
+/* SMALL MOBILE PHONES */
+
+@media (max-width: 480px) {
+
+  .company-title h1 {
+    max-width: 190px;
+    font-size: 15px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .hero h2 {
+    font-size: 25px;
+  }
+
+  .lightbox {
+    padding: 55px 45px;
+  }
+
+  #prevImage {
+    left: 3px;
+  }
+
+  #nextImage {
+    right: 3px;
+  }
+
+}
